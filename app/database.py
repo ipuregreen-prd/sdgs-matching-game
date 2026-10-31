@@ -6,9 +6,9 @@ import urllib.request
 import urllib.error
 from pathlib import Path
 from urllib.parse import urlsplit
-from dotenv import load_dotenv
+from app.database_config import load_database_config
 
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+load_database_config()
 
 def resolve_db_path():
     env_path = os.environ.get("SDGS_DB_PATH")

@@ -15,7 +15,7 @@ class PlatformAuthTests(unittest.TestCase):
                 session = verify_admin_token(authorization="Bearer platform:test-jwt", token=None)
             self.assertEqual(session["role"], role)
             request = remote.call_args.args[0]
-            self.assertEqual(request.full_url, "https://sdgs-action-platform.vercel.app/api/auth/me")
+            self.assertEqual(request.full_url, "https://sdgs-action-platform-prd.vercel.app/api/auth/me")
             self.assertEqual(request.get_header("Authorization"), "Bearer test-jwt")
 
     def test_students_and_removed_accounts_are_rejected(self):

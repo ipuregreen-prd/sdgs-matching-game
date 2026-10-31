@@ -1,5 +1,5 @@
 // Only public year metadata crosses origins. Authentication remains in the platform.
-const platformYearOrigin = 'https://sdgs-action-platform.vercel.app';
+const platformYearOrigin = 'https://sdgs-action-platform-prd.vercel.app';
 let publicYearId = Number(new URLSearchParams(location.search).get('academic_year_id') || 1);
 const moduleYearFetch = window.fetch.bind(window);
 window.fetch = (input, options={}) => {

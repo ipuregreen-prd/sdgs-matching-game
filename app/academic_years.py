@@ -12,7 +12,7 @@ COPY_TABLES = ("goals", "targets", "scenarios", "system_settings")
 
 
 def valid_public_year(year_id):
-    with urllib.request.urlopen("https://sdgs-action-platform.vercel.app/api/academic-years", timeout=15) as response:
+    with urllib.request.urlopen("https://sdgs-action-platform-prd.vercel.app/api/academic-years", timeout=15) as response:
         years = json.load(response)
     return any(year["id"] == year_id for year in years)
 

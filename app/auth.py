@@ -54,7 +54,7 @@ def verify_admin_token(
         if cached and cached[0] == raw_token:
             return cached[1]
         request = urllib.request.Request(
-            "https://sdgs-action-platform.vercel.app/api/auth/me",
+            "https://sdgs-action-platform-prd.vercel.app/api/auth/me",
             headers={"Authorization": "Bearer " + raw_token.removeprefix("platform:")},
         )
         try:
